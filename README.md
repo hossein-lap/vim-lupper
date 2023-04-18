@@ -1,17 +1,17 @@
-# Octave
+# Lupper
 
-A minimal colorscheme for Vim.
+A minimal blue colorscheme for Vim.
 
 ## Screenshots
 
 *Fira Code* font on dark background:
 
-![](screenshots/shot-230418_033800.png)
+![](screenshots/shot-230418_034905.png)
 
 ## Installation
 
 Copy the color scheme file to your `~/.vim/colors` directory, or use a plugin
-manager like [Plug][] or [Vundle][] and add `"hossein-lap/vim-octave"`
+manager like [Plug][] or [Vundle][] and add `"hossein-lap/vim-lupper"`
 as a plugin.
 
 [vundle]: https://github.com/gmarik/Vundle.vim
@@ -20,7 +20,7 @@ as a plugin.
 ## Usage
 
 ```
-:colorscheme octave
+:colorscheme lupper
 ```
 
 Supports both `background=light` and `background=dark`.

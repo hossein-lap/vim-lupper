@@ -1,9 +1,9 @@
-" Name:       octave.vim
+" Name:       lupper.vim
 " Version:    0.1.0
 " Maintainer: github.com/hossein-lap
 " License:    The MIT License (MIT)
 "
-" A minimal orange colorscheme for Vim.
+" A minimal blue colorscheme for Vim.
 "
 " Forked from sunbather:
 " https://github.com/nikolvs/vim-sunbather
@@ -39,7 +39,7 @@ else
 endif
 " }}}
 
-let g:colors_name='octave'
+let g:colors_name='lupper'
 
 let s:black           = { "gui": "#000000", "cterm": "232"  }
 let s:actual_black    = { "gui": "NONE",    "cterm": "NONE" }
@@ -54,10 +54,9 @@ let s:lighter_gray    = { "gui": "#C6C6C6", "cterm": "251"  }
 let s:lightest_gray   = { "gui": "#EEEEEE", "cterm": "255"  }
 let s:dark_pink       = { "gui": "#ff5f87", "cterm": "204"  }
 let s:light_pink      = { "gui": "#d75f87", "cterm": "168"  }
-let s:dark_red        = { "gui": "#8b0000", "cterm": "1"    }
-let s:light_red       = { "gui": "#EC1717", "cterm": "1"    }
-let s:dark_orange     = { "gui": "#DA5000", "cterm": "167"  }
-let s:light_orange    = { "gui": "#FF8C00", "cterm": "167"  }
+let s:dark_red        = { "gui": "#C30771", "cterm": "1"    }
+let s:light_red       = { "gui": "#E32791", "cterm": "1"    }
+let s:orange          = { "gui": "#D75F5F", "cterm": "167"  }
 let s:darker_blue     = { "gui": "#005F87", "cterm": "18"   }
 let s:dark_blue       = { "gui": "#008EC4", "cterm": "32"   }
 let s:blue            = { "gui": "#20BBFC", "cterm": "12"   }
@@ -67,7 +66,7 @@ let s:light_cyan      = { "gui": "#4FB8CC", "cterm": "14"   }
 let s:dark_green      = { "gui": "#10A778", "cterm": "2"    }
 let s:light_green     = { "gui": "#5FD7A7", "cterm": "10"   }
 let s:light_purple    = { "gui": "#a790d5", "cterm": "140"  }
-let s:yellow          = { "gui": "#ffdd00", "cterm": "11"   }
+let s:yellow          = { "gui": "#F3E430", "cterm": "11"   }
 let s:light_yellow    = { "gui": "#ffff87", "cterm": "228"  }
 let s:dark_yellow     = { "gui": "#A89C14", "cterm": "3"    }
 
@@ -85,8 +84,7 @@ if &background == "dark"
   let s:red             = s:light_red
   let s:visual          = s:light_blue
   let s:yellow          = s:light_yellow
-  let s:blue            = s:light_blue
-  let s:orange          = s:light_orange
+  let s:blue            = s:dark_blue
 else
   let s:bg              = s:actual_white
   let s:bg_subtle       = s:light_gray
@@ -99,7 +97,6 @@ else
   let s:red             = s:dark_red
   let s:visual          = s:dark_blue
   let s:yellow          = s:dark_yellow
-  let s:orange          = s:dark_orange
 endif
 
 " https://github.com/noahfrederick/vim-hemisu/
@@ -122,17 +119,17 @@ if &background != s:background
    execute "set background=" . s:background
 endif
 
-call s:h("Cursor",        {"bg": s:orange, "fg": s:norm })
+call s:h("Cursor",        {"bg": s:blue, "fg": s:norm })
 call s:h("Comment",       {"fg": s:bg_subtle, "gui": s:theitalic, "cterm": s:theitalic})
 
-call s:h("Constant",      {"fg": s:orange})
+call s:h("Constant",      {"fg": s:blue})
 hi! link Character        Constant
 hi! link Number           Constant
 hi! link Boolean          Constant
 hi! link Float            Constant
 hi! link String           Constant
 
-"call s:h("Identifier",    {"fg": s:dark_orange})
+"call s:h("Identifier",    {"fg": s:dark_blue})
 hi! link Identifier       PlainNormal
 hi! link Function         Identifier
 
@@ -166,22 +163,22 @@ hi! link Debug            Special
 call s:h("Underlined",    {"fg": s:norm, "gui": s:theurl, "cterm": s:theurl})
 call s:h("Ignore",        {"fg": s:bg})
 call s:h("Error",         {"fg": s:actual_white, "bg": s:red, "cterm": s:thebold})
-call s:h("Todo",          {"fg": s:orange, "gui": s:theurl, "cterm": s:theurl})
+call s:h("Todo",          {"fg": s:blue, "gui": s:theurl, "cterm": s:theurl})
 call s:h("SpecialKey",    {"fg": s:light_green})
 call s:h("NonText",       {"fg": s:medium_gray})
-call s:h("Directory",     {"fg": s:dark_orange})
+call s:h("Directory",     {"fg": s:dark_blue})
 call s:h("ErrorMsg",      {"fg": s:red})
 call s:h("IncSearch",     {"bg": s:yellow, "fg": s:light_black})
 call s:h("Search",        {"bg": s:light_green, "fg": s:light_black})
 call s:h("MoreMsg",       {"fg": s:medium_gray, "cterm": s:thebold, "gui": s:thebold})
 hi! link ModeMsg MoreMsg
 call s:h("LineNr",        {"fg": s:bg_subtle})
-call s:h("CursorLineNr",  {"fg": s:orange, "bg": s:bg_very_subtle})
+call s:h("CursorLineNr",  {"fg": s:blue, "bg": s:bg_very_subtle})
 call s:h("Question",      {"fg": s:red})
 call s:h("StatusLine",    {"bg": s:bg_very_subtle})
 call s:h("StatusLineNC",  {"bg": s:bg_very_subtle, "fg": s:medium_gray})
 call s:h("VertSplit",     {"bg": s:black, "fg": s:white})
-call s:h("Title",         {"fg": s:dark_orange})
+call s:h("Title",         {"fg": s:dark_blue})
 call s:h("Visual",        {"fg": s:black, "bg": s:visual})
 call s:h("VisualNOS",     {"bg": s:bg_subtle})
 call s:h("WarningMsg",    {"fg": s:yellow})
@@ -191,7 +188,7 @@ call s:h("FoldColumn",    {"fg": s:bg_subtle})
 call s:h("DiffAdd",       {"fg": s:green})
 call s:h("DiffDelete",    {"fg": s:red})
 call s:h("DiffChange",    {"fg": s:dark_yellow})
-call s:h("DiffText",      {"fg": s:dark_orange})
+call s:h("DiffText",      {"fg": s:dark_blue})
 call s:h("SignColumn",    {"fg": s:light_green})
 
 
@@ -208,11 +205,11 @@ else
 endif
 
 call s:h("Pmenu",         {"fg": s:norm, "bg": s:black})
-call s:h("PmenuSel",      {"fg": s:black, "bg": s:orange})
+call s:h("PmenuSel",      {"fg": s:black, "bg": s:blue})
 call s:h("PmenuSbar",     {"fg": s:norm, "bg": s:bg_subtle})
 call s:h("PmenuThumb",    {"fg": s:norm, "bg": s:bg_subtle})
 call s:h("TabLine",       {"fg": s:norm, "bg": s:bg_very_subtle})
-call s:h("TabLineSel",    {"fg": s:subtle_black, "bg": s:orange, "gui": s:thebold, "cterm": s:thebold})
+call s:h("TabLineSel",    {"fg": s:subtle_black, "bg": s:blue, "gui": s:thebold, "cterm": s:thebold})
 call s:h("TabLineFill",   {"fg": s:norm, "bg": s:bg_very_subtle})
 call s:h("CursorColumn",  {"bg": s:bg_very_subtle})
 call s:h("CursorLine",    {"bg": s:bg_very_subtle})
@@ -235,7 +232,7 @@ call s:h("SyntasticErrorSign",      {"fg": s:red})
 call s:h("SyntasticError",          {"bg": s:red, "fg": s:white, "gui": s:thebold, "cterm": s:thebold})
 
 " which-key.nvim
-call s:h("WhichKey",                {"bg": s:bg, "fg": s:orange, "gui": s:thebold, "cterm": s:thebold})
+call s:h("WhichKey",                {"bg": s:bg, "fg": s:blue, "gui": s:thebold, "cterm": s:thebold})
 call s:h("WhichKeyDesc",            {"bg": s:bg, "fg": s:norm_subtle, "gui": s:thebold, "cterm": s:thebold})
 call s:h("WhichKeySeparator",       {"bg": s:bg, "fg": s:norm, "gui": s:thebold, "cterm": s:thebold})
 call s:h("WhichKeyFloat",           {"bg": s:bg})
