@@ -29,7 +29,7 @@ else
 endif
 " }}}
 
-let g:colors_name='lupper-test'
+let g:colors_name='lupper'
 
 let s:black           = { "gui": "#000000", "cterm": "232"  }
 let s:actual_black    = { "gui": "NONE",    "cterm": "NONE" }
