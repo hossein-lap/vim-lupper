@@ -6,7 +6,7 @@ A minimal blue colorscheme for Vim.
 
 *Fira Code* font on dark background:
 
-![](screenshots/shot-230418_034905.png)
+![lupper-blue](screenshots/shot-230621_035208.png)
 
 ## Installation
 
